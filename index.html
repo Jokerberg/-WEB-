@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="常州大学怀德学院 2026 级新生入学答疑汇总" />
+    <title>怀德新生攻略 | 2026</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Noto+Sans+SC:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="./styles.css" />
+    <style>
+      :root { --blue: #9F2622; --deep: #651713; --cyan: #C34B45; --accent: #E7B5A8; }
+      .brand-badge { width: 34px; height: 34px; object-fit: contain; }
+      .hero-badge { position: absolute; top: 72px; right: max(24px, calc((100vw - 1120px) / 2)); width: 96px; height: 96px; padding: 7px; background: rgba(255, 255, 255, .93); object-fit: contain; }
+      .hero-shade { background: linear-gradient(90deg, rgba(70, 10, 8, .9), rgba(159, 38, 34, .58) 52%, rgba(84, 15, 12, .34)), linear-gradient(0deg, rgba(60, 8, 6, .7), transparent 48%); }
+      .guide-version, .ticker { background: rgba(159, 38, 34, .94); }
+      .button-primary { color: #651713; }
+      .ticker { position: absolute; right: 0; bottom: 0; left: 0; height: 34px; overflow: hidden; background: rgba(159, 38, 34, .94); font-size: 13px; line-height: 34px; animation: none; }
+      .ticker-track { display: flex; width: max-content; white-space: nowrap; will-change: transform; animation: ticker-scroll 24s linear infinite; }
+      .ticker-track span { display: block; flex: none; padding-right: 3rem; }
+      @keyframes ticker-scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+      @media (prefers-reduced-motion: reduce) { .ticker-track { animation: none; } }
+      @media (max-width: 720px) { .hero-badge { top: 68px; right: 16px; width: 64px; height: 64px; padding: 5px; } }
+      .campus-map { padding: 88px 0 20px; }
+      .campus-map__heading { display: flex; align-items: end; justify-content: space-between; gap: 24px; margin-bottom: 24px; }
+      .campus-map__heading h2 { margin: 0; font-size: clamp(32px, 4vw, 49px); line-height: 1.18; }
+      .campus-map__heading p { max-width: 370px; margin: 0; color: var(--muted); font-size: 14px; }
+      .campus-map__frame { display: block; overflow: hidden; border: 1px solid var(--line); background: #fff; }
+      .campus-map__frame a { position: relative; display: block; }
+      .campus-map__image { display: block; width: 100%; height: auto; }
+      .campus-map__credit { position: absolute; right: 10px; bottom: 10px; margin: 0; padding: 3px 6px; background: rgba(0, 0, 0, .58); color: #fff; font-size: 11px; line-height: 1.35; }
+      .contact-strip { padding: 0 0 88px; }
+      .contact-strip__inner { display: grid; grid-template-columns: .72fr 1.28fr; gap: 36px; align-items: center; padding: 34px; background: #fff; border-top: 3px solid var(--blue); }
+      .contact-strip h2 { margin: 0; font-size: 26px; }
+      .contact-strip p { margin: 5px 0 0; color: var(--muted); font-size: 14px; }
+      .contact-strip__list { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+      .contact-strip__item { min-height: 82px; padding: 14px; background: #f8f2f1; border-left: 2px solid var(--blue); }
+      .contact-strip__item small { display: block; color: var(--blue); font: 500 11px "DM Mono", monospace; letter-spacing: .5px; }
+      .contact-strip__item strong { display: block; margin-top: 6px; font-size: 15px; word-break: break-all; }
+      body { isolation: isolate; }
+      .watermark-layer { position: fixed; inset: -25vh -25vw; z-index: 0; display: grid; grid-template-columns: repeat(12, 1fr); grid-template-rows: repeat(10, 1fr); align-items: center; justify-items: center; transform: rotate(-45deg); pointer-events: none; user-select: none; overflow: hidden; }
+      .watermark-layer span { color: rgba(159, 38, 34, .07); font: 600 15px "Noto Sans SC", sans-serif; white-space: nowrap; letter-spacing: 0; }
+      .site-header, main, footer { position: relative; z-index: 1; }
+      .campus-map figcaption { padding: 12px 16px; color: var(--muted); font-size: 13px; }
+      @media (max-width: 720px) { .campus-map { padding-top: 58px; } .campus-map__heading { display: block; } .campus-map__heading p { margin-top: 10px; } .contact-strip { padding-bottom: 58px; } .contact-strip__inner { grid-template-columns: 1fr; gap: 22px; padding: 24px; } .contact-strip__list { grid-template-columns: 1fr; } }
+    </style>
+  </head>
+  <body>
+    <div class="watermark-layer" aria-hidden="true">
+      <span>抖音 小星学长（怀德学院）</span><span>抖音 小星学长（怀德学院）</span><span>抖音 小星学长（怀德学院）</span><span>抖音 小星学长（怀德学院）</span><span>抖音 小星学长（怀德学院）</span><span>抖音 小星学长（怀德学院）</span>
+      <span>抖音 小星学长（怀德学院）</span><span>抖音 小星学长（怀德学院）</span><span>抖音 小星学长（怀德学院）</span><span>抖音 小星学长（怀德学院）</span><span>抖音 小星学长（怀德学院）</span><span>抖音 小星学长（怀德学院）</span>
+      <span>抖音 小星学长（怀德学院）</span><span>抖音 小星学长（怀德学院）</span><span>抖音 小星学长（怀德学院）</span><span>抖音 小星学长（怀德学院）</span><span>抖音 小星学长（怀德学院）</span><span>抖音 小星学长（怀德学院）</span>
+      <span>抖音 小星学长（怀德学院）</span><span>抖音 小星学长（怀德学院）</span><span>抖音 小星学长（怀德学院）</span><span>抖音 小星学长（怀德学院）</span><span>抖音 小星学长（怀德学院）</span><span>抖音 小星学长（怀德学院）</span>
+      <span>抖音 小星学长（怀德学院）</span><span>抖音 小星学长（怀德学院）</span><span>抖音 小星学长（怀德学院）</span><span>抖音 小星学长（怀德学院）</span><span>抖音 小星学长（怀德学院）</span><span>抖音 小星学长（怀德学院）</span>
+    </div>
+    <header class="site-header">
+      <a class="brand" href="#top"><img class="brand-badge" src="./assets/huaide-badge.png" alt="常州大学怀德学院校徽" /><strong>怀德新生攻略</strong></a>
+      <nav aria-label="主导航"><a href="#guide">新生答疑</a><a href="#dorm">宿舍生活</a><a href="#arrival">报到流程</a><a href="#support">资助缴费</a></nav>
+      <a class="header-action" href="#directory">攻略目录 <i data-lucide="arrow-down"></i></a>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <img class="hero-image" src="./assets/tsg.jpg" alt="常州大学怀德学院校园建筑" />
+        <div class="hero-shade"></div>
+        <img class="hero-badge" src="./assets/huaide-badge.png" alt="常州大学怀德学院校徽" />
+        <div class="guide-version">2026 FRESHMAN GUIDE · V1.0</div>
+        <div class="hero-content wrap">
+          <p class="eyebrow">CHANGZHOU UNIVERSITY HUAIDE COLLEGE · 2026</p>
+          <h1 id="hero-title">WELCOME TO<br /><span>怀德新生攻略</span></h1>
+          <p class="hero-copy">把入学、生活、学习中最常被问到的事，一次说明白。</p>
+          <div class="hero-buttons"><a class="button button-primary" href="#guide">查看答疑汇总 <i data-lucide="arrow-down"></i></a><a class="button button-quiet" href="https://www.huaide.net/" target="_blank" rel="noreferrer">学校官网 <i data-lucide="external-link"></i></a></div>
+        </div>
+        <div class="hero-stats wrap"><div><small>核心问题</small><b>29</b></div><div><small>答疑板块</small><b>14</b></div><div><small>更新时间</small><b>2026.07</b></div></div>
+        <div class="ticker" aria-label="2026 新生攻略信息滚动展示">
+          <div class="ticker-track">
+            <span>2026 新生攻略　·　常州大学怀德学院　·　报到流程　·　宿舍生活　·　校园服务　·　WELCOME FRESHMEN　·　</span>
+            <span aria-hidden="true">2026 新生攻略　·　常州大学怀德学院　·　报到流程　·　宿舍生活　·　校园服务　·　WELCOME FRESHMEN　·　</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="quick-links wrap" aria-label="快速入口">
+        <a href="#arrival"><i data-lucide="clipboard-check"></i><span>报到流程</span><small>01</small></a><a href="#dorm"><i data-lucide="building-2"></i><span>住宿体系</span><small>02</small></a><a href="#support"><i data-lucide="wallet-cards"></i><span>收费资助</span><small>03</small></a><a href="#travel"><i data-lucide="bus-front"></i><span>交通出行</span><small>04</small></a>
+      </section>
+
+      <section class="campus-map wrap" aria-labelledby="campus-map-title">
+        <div class="campus-map__heading"><div><p class="eyebrow accent">CAMPUS MAP</p><h2 id="campus-map-title">校园地图</h2></div><p>报到前先熟悉北大门、宿舍区、食堂、图书馆、操场与快递中心的位置。</p></div>
+        <figure class="campus-map__frame"><a href="./assets/campus-map-full.png" target="_blank" rel="noreferrer" aria-label="在新窗口查看校园地图大图"><img class="campus-map__image" src="./assets/campus-map-full.png" alt="常州大学怀德学院校园地图，标注北大门、宿舍楼、食堂、图书馆、操场及快递中心" /><span class="campus-map__credit">该图片并非用于盈利，侵权连系删除</span></a><figcaption>点击地图可查看大图</figcaption></figure>
+      </section>
+
+      <section class="intro wrap"><p class="eyebrow accent">FOR EVERY NEW HUAIDER</p><div><h2>入学这件事，<br />不必手忙脚乱。</h2><p>本页根据 2026 级录取新生关注的入学、生活与学习问题整理。时间、收费等内容如有调整，请始终以纸质录取通知书及学校最新公告为准。</p></div></section>
+
+      <section id="guide" class="guide wrap" aria-labelledby="guide-title">
+        <div class="section-heading"><div><p class="eyebrow accent">FRESHMAN FAQ</p><h2 id="guide-title">新生答疑目录</h2></div><p>点击板块展开查看详情</p></div>
+        <div id="directory" class="guide-grid">
+          <article id="arrival" class="guide-item open"><button class="guide-toggle" aria-expanded="true"><span class="guide-number">01</span><span><strong>时间规划</strong><small>IMPORTANT DATES</small></span><i data-lucide="plus"></i></button><div class="guide-detail"><div class="answer-grid"><p><b>报到与行课</b>2026 级新生报到时间待定，最终以纸质录取通知书标注时间为准。</p><p><b>录取通知书</b>统一通过 EMS 寄送，周期为 7 月底至 8 月初，可登录学校招生官网查询物流状态。</p></div></div></article>
+          <article id="dorm" class="guide-item"><button class="guide-toggle" aria-expanded="false"><span class="guide-number">02</span><span><strong>住宿体系</strong><small>DORMITORY LIFE</small></span><i data-lucide="plus"></i></button><div class="guide-detail"><p class="lead">全校共有 8 栋学生公寓：2、3、4、5、7 号楼为女生公寓，1、6、8 号楼为男生公寓。均配备独立卫浴、阳台、洗漱台、空调、学习桌椅、书柜和衣柜，24 小时通水、通电、通网络。</p><div class="answer-grid"><p><b>费用与床位</b>住宿费 1000-1500 元 / 年；水费免费，电费分摊。宿舍和床位由学校统一分配，不可自主选择。床位尺寸为 90cm × 200cm。</p><p><b>宿舍配置</b>宽带免费使用，绑定校园卡账号即可登录；楼道设有公共热水设备。男生 8 号楼为六人间，女生 4 号楼为四人间，基础条件相近。</p><p><b>走读申请</b>因特殊情况需校外住宿，须提交走读申请并取得家长同意，具体流程咨询辅导员。</p><p><b>床位安排</b>主要依据班级与学号。提前到校可在当日安排内选择床位。</p></div></div></article>
+          <article class="guide-item"><button class="guide-toggle" aria-expanded="false"><span class="guide-number">03</span><span><strong>校园卡办理</strong><small>CAMPUS CARD</small></span><i data-lucide="plus"></i></button><div class="guide-detail"><div class="answer-grid"><p><b>线上申领</b>校园卡不随录取材料统一发放，暑期申领通道已开启，可通过二维码或学校公众号菜单栏按提示申请。</p><p><b>使用权益</b>办理后可免费使用校园网络；支持邮寄到家，减少开学现场排队。</p></div></div></article>
+          <article class="guide-item"><button class="guide-toggle" aria-expanded="false"><span class="guide-number">04</span><span><strong>餐饮与生活成本</strong><small>DINING & BUDGET</small></span><i data-lucide="plus"></i></button><div class="guide-detail"><div class="answer-grid"><p><b>两座食堂</b>一食堂一楼主营面食与自选餐，二楼设清真窗口和教职工餐厅；二食堂一楼菜品、面食品类最全，二楼主打特色小吃。</p><p><b>消费与兼职</b>食堂支持微信、支付宝无现金支付，校内允许外卖。每月餐饮约 600-800 元，综合生活开支约 1500 元 / 月；校内有兼职与勤工助学岗位。</p></div></div></article>
+          <article class="guide-item"><button class="guide-toggle" aria-expanded="false"><span class="guide-number">05</span><span><strong>公共浴室与快递</strong><small>DAILY SERVICES</small></span><i data-lucide="plus"></i></button><div class="guide-detail"><div class="answer-grid"><p><b>公共浴室</b>学生公寓楼下设置公共浴室，每日 16:30 起开放，单次洗浴约 1 元。可按需选购 2m × 1.2m 浴帘。</p><p><b>快递服务</b>快递站位于校区南侧，沿公寓楼通道直行可达。收件地址：江苏省泰州市靖江市新港大道 136 号常州大学怀德学院。尽量在 21:00 前取件。</p></div></div></article>
+          <article class="guide-item"><button class="guide-toggle" aria-expanded="false"><span class="guide-number">06</span><span><strong>新生报到事宜</strong><small>REGISTRATION</small></span><i data-lucide="plus"></i></button><div class="guide-detail"><div class="answer-grid"><p><b>携带材料</b>录取通知书、身份证、6 张一寸免冠证件照；家庭经济困难学生另带民政部门贫困证明。报到地点在二食堂门口，需人脸核验。</p><p><b>现场流程</b>现场登记 → 院系班级签到 → 领取宿舍钥匙安置行李 → 缴纳 20 元空调遥控器押金并领取设备。</p><p><b>学校地址</b>江苏省泰州市靖江市新港大道 136 号常州大学怀德学院。无法按时报到需履行请假手续。</p><p><b>注意事项</b>严格遵守报到时间；逾期未报到将取消入学资格。</p></div></div></article>
+          <article id="support" class="guide-item"><button class="guide-toggle" aria-expanded="false"><span class="guide-number">07</span><span><strong>收费与资助政策</strong><small>TUITION & SUPPORT</small></span><i data-lucide="plus"></i></button><div class="guide-detail"><div class="answer-grid"><p><b>学费标准</b>人文社科类 18000 元 / 学年，理工类 20000 元 / 学年，艺术类 22000 元 / 学年；每年各专业学费有所浮动。</p><p><b>缴费方式</b>开学前 10 天将费用存入校方银行卡自动扣费，或通过“常州大学财务处”公众号线上缴费。助学贷款、建档立卡学生无需预存费用。</p><p><b>生源地贷款</b>符合条件者可在户籍地申请，在校期间免息，毕业后分期还款，年度最高额度 16000 元，可用于学费、住宿费。</p><p><b>住宿与代办</b>住宿费 1000-1500 元 / 学年，另有新生代办费，执行省内最新政策标准。</p></div></div></article>
+          <article class="guide-item"><button class="guide-toggle" aria-expanded="false"><span class="guide-number">08</span><span><strong>军训与转专业</strong><small>TRAINING & MAJOR</small></span><i data-lucide="plus"></i></button><div class="guide-detail"><div class="answer-grid"><p><b>军训安排</b>启动时间待定，常规安排在开学一周之后。须着统一服装，建议准备内搭衣物、防滑软鞋垫和防晒用品。</p><p><b>转专业政策</b>入学后可申请转专业，由学院组织综合考核。本专业成绩位列前 30% 的申请者，考核通过概率更高。</p></div></div></article>
+          <article class="guide-item"><button class="guide-toggle" aria-expanded="false"><span class="guide-number">09</span><span><strong>学习、社团与考研</strong><small>STUDY & COMMUNITY</small></span><i data-lucide="plus"></i></button><div class="guide-detail"><div class="answer-grid"><p><b>考研保障</b>图书馆设考研专属座位，开放时间 8:00-21:00；各公寓楼内也有自习室，便于备考。</p><p><b>学生社团</b>社团覆盖文体、学术、公益、兴趣等领域，可自由报名。建议加入不超过 3 个，以免影响学业和作息。</p></div></div></article>
+          <article id="travel" class="guide-item"><button class="guide-toggle" aria-expanded="false"><span class="guide-number">10</span><span><strong>交通与休闲</strong><small>TRAVEL & LEISURE</small></span><i data-lucide="plus"></i></button><div class="guide-detail"><div class="answer-grid"><p><b>日常出行</b>校内可骑行非机动车；223 路、206 路公交连接校园与靖江市区，约 40 分钟。校门口共享电动车半小时约 2.5 元。</p><p><b>周边去处</b>泰和吾悦商圈是主要购物场所；牧城公园是本地大型免费公园。往返江阴可公交换乘，约 7 元，最近高铁站为无锡江阴站。</p></div></div></article>
+          <article class="guide-item"><button class="guide-toggle" aria-expanded="false"><span class="guide-number">11</span><span><strong>校园基本情况</strong><small>ABOUT HUAIDE</small></span><i data-lucide="plus"></i></button><div class="guide-detail"><div class="answer-grid"><p><b>校区位置</b>学校位于靖江市斜桥镇，生态环境良好，生活配套完善。</p><p><b>院系特点</b>全校男女比例约 4:6，逐步趋于均衡；建筑环境、机械材料、信息类男生较多，会计、经管、艺术、外语类女生较多。</p></div></div></article>
+        </div>
+      </section>
+
+      <section class="notice-band"><div class="wrap"><i data-lucide="info"></i><p>本文为新生常见问题汇总，政策与日期如有变动，请以录取通知书及学校官方渠道发布的信息为准。</p></div></section>
+      <section class="closing wrap"><div><p class="eyebrow accent">BE READY, BE CURIOUS</p><h2>找到组织，<br />再出发。</h2><p>需要查阅各专业大一上学期课表，可联系文末工作人员获取。宿舍环境视频与官方新生群信息可在学校正式通知发布后补充至本页面。</p></div><aside><i data-lucide="graduation-cap"></i><h3>2026 级新生</h3><p>常州大学怀德学院</p><span>入学答疑汇总</span></aside></section>
+      <section class="contact-strip wrap" aria-labelledby="contact-strip-title"><div class="contact-strip__inner"><div><h2 id="contact-strip-title">学长联系方式</h2><p>新生咨询与交流</p></div><div class="contact-strip__list"><div class="contact-strip__item"><small>QQ 新生群</small><strong>874640064</strong></div><div class="contact-strip__item"><small>微信</small><strong>qun483</strong></div><div class="contact-strip__item"><small>抖音</small><strong>Leon888888888888</strong></div></div></div></section>
+    </main>
+    <footer><div class="wrap"><a class="brand" href="#top"><span>HD</span><strong>怀德新生攻略</strong></a><p>常州大学怀德学院 · 2026 级新生入学答疑</p><p>更新于 2026.07</p></div></footer>
+    <script src="./script.js"></script>
+  </body>
+</html>
