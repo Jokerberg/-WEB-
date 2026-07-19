@@ -4,6 +4,7 @@ const accessModal = document.querySelector('#access-modal');
 const accessForm = document.querySelector('#access-modal-form');
 const passwordInput = document.querySelector('#access-password');
 const accessError = document.querySelector('#access-modal-error');
+const accessModalClose = document.querySelector('#access-modal-close');
 let pendingButton = null;
 let hasAccess = localStorage.getItem(accessKey) === 'granted';
 
@@ -30,6 +31,11 @@ function showAccessModal(button) {
   passwordInput.value = '';
   accessModal.hidden = false;
   passwordInput.focus();
+}
+
+function closeAccessModal() {
+  accessModal.hidden = true;
+  pendingButton = null;
 }
 
 if (!hasAccess) {
@@ -62,6 +68,8 @@ accessForm.addEventListener('submit', (event) => {
     pendingButton = null;
   }
 });
+
+accessModalClose.addEventListener('click', closeAccessModal);
 
 const watermarkLayer = document.querySelector('.watermark-layer');
 if (watermarkLayer) {

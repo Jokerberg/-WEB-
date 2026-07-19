@@ -50,11 +50,18 @@
       .access-modal__dialog { width: min(100%, 420px); padding: 30px; border-top: 4px solid var(--blue); background: #fff; box-shadow: 0 20px 60px rgba(0, 0, 0, .26); }
       .access-modal__dialog h2 { margin: 0 0 8px; font-size: 25px; }
       .access-modal__dialog p { margin: 0; color: var(--muted); }
+      .access-modal__close { position: absolute; top: 14px; right: 14px; display: grid; place-items: center; width: 36px; height: 36px; padding: 0; border: 0; background: transparent; color: var(--ink); cursor: pointer; }
+      .access-modal__close:hover { color: var(--blue); background: #f8f2f1; }
+      .access-modal__dialog { position: relative; }
+      .access-modal__wechat { display: block; margin-top: 8px; color: var(--blue); font: 700 27px "DM Mono", monospace; letter-spacing: 0; }
+      .access-modal__wechat-label { color: var(--blue); font-size: 19px; font-weight: 800; }
+      .access-modal__unlock-note { margin-top: 5px !important; color: var(--blue) !important; font-size: 14px; font-weight: 700; }
       .access-modal__form { display: grid; gap: 12px; margin-top: 22px; }
       .access-modal__form label { font-size: 13px; font-weight: 700; }
       .access-modal__form input { min-width: 0; padding: 12px 13px; border: 1px solid var(--line); border-radius: 0; font: inherit; }
       .access-modal__form button { justify-self: start; border: 0; border-radius: 0; padding: 12px 18px; background: var(--blue); color: #fff; font: inherit; font-weight: 700; cursor: pointer; }
       .access-modal__error { min-height: 20px; color: #a92320 !important; font-size: 13px; }
+      .reference-link { display: inline-block; margin-top: 10px; color: var(--blue); font-weight: 700; text-decoration: underline; text-underline-offset: 3px; }
     </style>
   </head>
   <body>
@@ -103,12 +110,12 @@
         <div id="directory" class="guide-grid">
           <article id="arrival" class="guide-item open"><button class="guide-toggle" aria-expanded="true"><span class="guide-number">01</span><span><strong>时间规划</strong><small>IMPORTANT DATES</small></span><i data-lucide="plus"></i></button><div class="guide-detail"><div class="answer-grid"><p><b>报到与行课</b>2026 级新生报到时间待定，最终以纸质录取通知书标注时间为准。</p><p><b>录取通知书</b>统一通过 EMS 寄送，周期为 7 月底至 8 月初，可登录学校招生官网查询物流状态。</p></div></div></article>
           <article id="dorm" class="guide-item"><button class="guide-toggle" aria-expanded="false"><span class="guide-number">02</span><span><strong>住宿体系</strong><small>DORMITORY LIFE</small></span><i data-lucide="plus"></i></button><div class="guide-detail"><p class="lead">全校共有 8 栋学生公寓：2、3、4、5、7 号楼为女生公寓，1、6、8 号楼为男生公寓。均配备独立卫浴、阳台、洗漱台、空调、学习桌椅、书柜和衣柜，24 小时通水、通电、通网络。</p><div class="answer-grid"><p><b>费用与床位</b>住宿费 1000-1500 元 / 年；水费免费，电费分摊。宿舍和床位由学校统一分配，不可自主选择。床位尺寸为 90cm × 200cm。</p><p><b>宿舍配置</b>宽带免费使用，绑定校园卡账号即可登录；楼道设有公共热水设备。男生 8 号楼为六人间，女生 4 号楼为四人间，基础条件相近。</p><p><b>用电提示</b>学校宿舍不限电，可以使用吹风机，但原则上不建议。</p><p><b>走读申请</b>因特殊情况需校外住宿，须提交走读申请并取得家长同意，具体流程咨询辅导员。</p><p><b>床位安排</b>主要依据班级与学号。提前到校可在当日安排内选择床位。</p></div></div></article>
-          <article class="guide-item"><button class="guide-toggle" aria-expanded="false"><span class="guide-number">03</span><span><strong>校园卡办理</strong><small>CAMPUS CARD</small></span><i data-lucide="plus"></i></button><div class="guide-detail"><div class="answer-grid"><p><b>线上申领</b>校园卡不随录取材料统一发放，暑期申领通道已开启，可通过二维码或学校公众号菜单栏按提示申请。</p><p><b>使用权益</b>办理后可免费使用校园网络；支持邮寄到家，减少开学现场排队。</p></div></div></article>
+          <article class="guide-item"><button class="guide-toggle" aria-expanded="false"><span class="guide-number">03</span><span><strong>校园卡办理</strong><small>CAMPUS CARD</small></span><i data-lucide="plus"></i></button><div class="guide-detail"><div class="answer-grid"><p><b>线上申领</b>校园卡不随录取材料统一发放，暑期申领通道已开启，可通过二维码或学校公众号菜单栏按提示申请。现在办理超划算，暑假期间免费使用。</p><p><b>使用权益</b>办理后可免费使用校园网络；支持邮寄到家，减少开学现场排队。</p></div></div></article>
           <article class="guide-item"><button class="guide-toggle" aria-expanded="false"><span class="guide-number">04</span><span><strong>餐饮与生活成本</strong><small>DINING & BUDGET</small></span><i data-lucide="plus"></i></button><div class="guide-detail"><div class="answer-grid"><p><b>两座食堂</b>一食堂一楼主营面食与自选餐，二楼设清真窗口和教职工餐厅；二食堂一楼菜品、面食品类最全，二楼主打特色小吃。</p><p><b>消费与兼职</b>食堂支持微信、支付宝无现金支付，校内允许外卖。每月餐饮约 600-800 元，综合生活开支约 1500 元 / 月；校内有兼职与勤工助学岗位。</p></div></div></article>
           <article class="guide-item"><button class="guide-toggle" aria-expanded="false"><span class="guide-number">05</span><span><strong>公共浴室与快递</strong><small>DAILY SERVICES</small></span><i data-lucide="plus"></i></button><div class="guide-detail"><div class="answer-grid"><p><b>公共浴室</b>学生公寓楼下设置公共浴室，每日 16:30 起开放，单次洗浴约 1 元。可按需选购 2m × 1.2m 浴帘。</p><p><b>快递服务</b>快递站位于校区南侧，沿公寓楼通道直行可达。收件地址：江苏省泰州市靖江市新港大道 136 号常州大学怀德学院。尽量在 21:00 前取件。</p></div></div></article>
           <article class="guide-item"><button class="guide-toggle" aria-expanded="false"><span class="guide-number">06</span><span><strong>新生报到事宜</strong><small>REGISTRATION</small></span><i data-lucide="plus"></i></button><div class="guide-detail"><div class="answer-grid"><p><b>携带材料</b>录取通知书、身份证、6 张一寸免冠证件照；家庭经济困难学生另带民政部门贫困证明。报到地点在二食堂门口，需人脸核验。</p><p><b>现场流程</b>现场登记 → 院系班级签到 → 领取宿舍钥匙安置行李 → 缴纳 20 元空调遥控器押金并领取设备。</p><p><b>学校地址</b>江苏省泰州市靖江市新港大道 136 号常州大学怀德学院。无法按时报到需履行请假手续。</p><p><b>注意事项</b>严格遵守报到时间；逾期未报到将取消入学资格。</p></div></div></article>
           <article id="support" class="guide-item"><button class="guide-toggle" aria-expanded="false"><span class="guide-number">07</span><span><strong>收费与资助政策</strong><small>TUITION & SUPPORT</small></span><i data-lucide="plus"></i></button><div class="guide-detail"><div class="answer-grid"><p><b>学费标准</b>人文社科类 18000 元 / 学年，理工类 20000 元 / 学年，艺术类 22000 元 / 学年；每年各专业学费有所浮动。</p><p><b>缴费方式</b>开学前 10 天将费用存入校方银行卡自动扣费，或通过“常州大学财务处”公众号线上缴费。助学贷款、建档立卡学生无需预存费用。</p><p><b>生源地贷款</b>符合条件者可在户籍地申请，在校期间免息，毕业后分期还款，年度最高额度 16000 元，可用于学费、住宿费。</p><p><b>住宿与代办</b>住宿费 1000-1500 元 / 学年，另有新生代办费，执行省内最新政策标准。</p></div></div></article>
-          <article class="guide-item"><button class="guide-toggle" aria-expanded="false"><span class="guide-number">08</span><span><strong>军训与转专业</strong><small>TRAINING & MAJOR</small></span><i data-lucide="plus"></i></button><div class="guide-detail"><div class="answer-grid"><p><b>军训安排</b>启动时间待定，常规安排在开学一周之后。须着统一服装，建议准备内搭衣物、防滑软鞋垫和防晒用品。</p><p><b>转专业政策</b>入学后可申请转专业，由学院组织综合考核。本专业成绩位列前 30% 的申请者，考核通过概率更高。</p></div></div></article>
+          <article class="guide-item"><button class="guide-toggle" aria-expanded="false"><span class="guide-number">08</span><span><strong>军训与转专业</strong><small>TRAINING & MAJOR</small></span><i data-lucide="plus"></i></button><div class="guide-detail"><div class="answer-grid"><p><b>军训安排</b>启动时间待定，常规安排在开学一周之后。须着统一服装，建议准备内搭衣物、防滑软鞋垫和防晒用品。</p><p><b>转专业政策</b>入学后可申请转专业，由学院组织综合考核。本专业成绩位列前 30% 的申请者，考核通过概率更高。<a class="reference-link" href="https://hdc.cczu.edu.cn/hdjwc/2026/0520/c8735a416006/page.htm" target="_blank" rel="noreferrer">上次官方通知</a></p></div></div></article>
           <article class="guide-item"><button class="guide-toggle" aria-expanded="false"><span class="guide-number">09</span><span><strong>学习、社团与考研</strong><small>STUDY & COMMUNITY</small></span><i data-lucide="plus"></i></button><div class="guide-detail"><div class="answer-grid"><p><b>考研保障</b>图书馆设考研专属座位，开放时间 8:00-21:00；各公寓楼内也有自习室，便于备考。</p><p><b>学生社团</b>社团覆盖文体、学术、公益、兴趣等领域，可自由报名。建议加入不超过 3 个，以免影响学业和作息。</p></div></div></article>
           <article id="travel" class="guide-item"><button class="guide-toggle" aria-expanded="false"><span class="guide-number">10</span><span><strong>交通与休闲</strong><small>TRAVEL & LEISURE</small></span><i data-lucide="plus"></i></button><div class="guide-detail"><div class="answer-grid"><p><b>日常出行</b>校内可骑行非机动车；223 路、206 路公交连接校园与靖江市区，约 40 分钟。校门口共享电动车半小时约 2.5 元。</p><p><b>周边去处</b>泰和吾悦商圈是主要购物场所；牧城公园是本地大型免费公园。往返江阴可公交换乘，约 7 元，最近高铁站为无锡江阴站。</p></div></div></article>
           <article class="guide-item"><button class="guide-toggle" aria-expanded="false"><span class="guide-number">11</span><span><strong>校园基本情况</strong><small>ABOUT HUAIDE</small></span><i data-lucide="plus"></i></button><div class="guide-detail"><div class="answer-grid"><p><b>校区位置</b>学校位于靖江市斜桥镇，生态环境良好，生活配套完善。</p><p><b>院系特点</b>全校男女比例约 4:6，逐步趋于均衡；建筑环境、机械材料、信息类男生较多，会计、经管、艺术、外语类女生较多。</p></div></div></article>
@@ -126,8 +133,11 @@
     <footer><div class="wrap"><a class="brand" href="#top"><span>HD</span><strong>怀德新生攻略</strong></a><p>常州大学怀德学院 · 2026 级新生入学答疑</p><p>更新于 2026.07</p></div></footer>
     <div class="access-modal" id="access-modal" hidden role="dialog" aria-modal="true" aria-labelledby="access-modal-title">
       <div class="access-modal__dialog">
+        <button class="access-modal__close" id="access-modal-close" type="button" aria-label="关闭密码窗口"><i data-lucide="x"></i></button>
         <h2 id="access-modal-title">访问答疑内容</h2>
-        <p>获取密码，请加微信：qun483</p>
+        <p>获取密码，请加<span class="access-modal__wechat-label">微信</span>：</p>
+        <strong class="access-modal__wechat">qun483</strong>
+        <p class="access-modal__unlock-note">解锁剩下 80%</p>
         <form class="access-modal__form" id="access-modal-form">
           <label for="access-password">输入访问密码</label>
           <input id="access-password" name="password" type="password" autocomplete="off" required />
