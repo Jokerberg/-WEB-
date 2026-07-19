@@ -45,6 +45,16 @@
       .site-header, main, footer { position: relative; z-index: 1; }
       .campus-map figcaption { padding: 12px 16px; color: var(--muted); font-size: 13px; }
       @media (max-width: 720px) { .campus-map { padding-top: 58px; } .campus-map__heading { display: block; } .campus-map__heading p { margin-top: 10px; } .contact-strip { padding-bottom: 58px; } .contact-strip__inner { grid-template-columns: 1fr; gap: 22px; padding: 24px; } .contact-strip__list { grid-template-columns: 1fr; } }
+      .access-modal[hidden] { display: none; }
+      .access-modal { position: fixed; inset: 0; z-index: 20; display: grid; place-items: center; padding: 24px; background: rgba(19, 24, 28, .58); }
+      .access-modal__dialog { width: min(100%, 420px); padding: 30px; border-top: 4px solid var(--blue); background: #fff; box-shadow: 0 20px 60px rgba(0, 0, 0, .26); }
+      .access-modal__dialog h2 { margin: 0 0 8px; font-size: 25px; }
+      .access-modal__dialog p { margin: 0; color: var(--muted); }
+      .access-modal__form { display: grid; gap: 12px; margin-top: 22px; }
+      .access-modal__form label { font-size: 13px; font-weight: 700; }
+      .access-modal__form input { min-width: 0; padding: 12px 13px; border: 1px solid var(--line); border-radius: 0; font: inherit; }
+      .access-modal__form button { justify-self: start; border: 0; border-radius: 0; padding: 12px 18px; background: var(--blue); color: #fff; font: inherit; font-weight: 700; cursor: pointer; }
+      .access-modal__error { min-height: 20px; color: #a92320 !important; font-size: 13px; }
     </style>
   </head>
   <body>
@@ -66,7 +76,7 @@
         <img class="hero-image" src="./assets/tsg.jpg" alt="常州大学怀德学院校园建筑" />
         <div class="hero-shade"></div>
         <img class="hero-badge" src="./assets/huaide-badge.png" alt="常州大学怀德学院校徽" />
-        <div class="guide-version">2026 FRESHMAN GUIDE · V1.0</div>
+        <div class="guide-version">2026 FRESHMAN GUIDE · V1.3</div>
         <div class="hero-content wrap">
           <p class="eyebrow">CHANGZHOU UNIVERSITY HUAIDE COLLEGE · 2026</p>
           <h1 id="hero-title">WELCOME TO<br /><span>怀德新生攻略</span></h1>
@@ -92,7 +102,7 @@
         <div class="section-heading"><div><p class="eyebrow accent">FRESHMAN FAQ</p><h2 id="guide-title">新生答疑目录</h2></div><p>点击板块展开查看详情</p></div>
         <div id="directory" class="guide-grid">
           <article id="arrival" class="guide-item open"><button class="guide-toggle" aria-expanded="true"><span class="guide-number">01</span><span><strong>时间规划</strong><small>IMPORTANT DATES</small></span><i data-lucide="plus"></i></button><div class="guide-detail"><div class="answer-grid"><p><b>报到与行课</b>2026 级新生报到时间待定，最终以纸质录取通知书标注时间为准。</p><p><b>录取通知书</b>统一通过 EMS 寄送，周期为 7 月底至 8 月初，可登录学校招生官网查询物流状态。</p></div></div></article>
-          <article id="dorm" class="guide-item"><button class="guide-toggle" aria-expanded="false"><span class="guide-number">02</span><span><strong>住宿体系</strong><small>DORMITORY LIFE</small></span><i data-lucide="plus"></i></button><div class="guide-detail"><p class="lead">全校共有 8 栋学生公寓：2、3、4、5、7 号楼为女生公寓，1、6、8 号楼为男生公寓。均配备独立卫浴、阳台、洗漱台、空调、学习桌椅、书柜和衣柜，24 小时通水、通电、通网络。</p><div class="answer-grid"><p><b>费用与床位</b>住宿费 1000-1500 元 / 年；水费免费，电费分摊。宿舍和床位由学校统一分配，不可自主选择。床位尺寸为 90cm × 200cm。</p><p><b>宿舍配置</b>宽带免费使用，绑定校园卡账号即可登录；楼道设有公共热水设备。男生 8 号楼为六人间，女生 4 号楼为四人间，基础条件相近。</p><p><b>走读申请</b>因特殊情况需校外住宿，须提交走读申请并取得家长同意，具体流程咨询辅导员。</p><p><b>床位安排</b>主要依据班级与学号。提前到校可在当日安排内选择床位。</p></div></div></article>
+          <article id="dorm" class="guide-item"><button class="guide-toggle" aria-expanded="false"><span class="guide-number">02</span><span><strong>住宿体系</strong><small>DORMITORY LIFE</small></span><i data-lucide="plus"></i></button><div class="guide-detail"><p class="lead">全校共有 8 栋学生公寓：2、3、4、5、7 号楼为女生公寓，1、6、8 号楼为男生公寓。均配备独立卫浴、阳台、洗漱台、空调、学习桌椅、书柜和衣柜，24 小时通水、通电、通网络。</p><div class="answer-grid"><p><b>费用与床位</b>住宿费 1000-1500 元 / 年；水费免费，电费分摊。宿舍和床位由学校统一分配，不可自主选择。床位尺寸为 90cm × 200cm。</p><p><b>宿舍配置</b>宽带免费使用，绑定校园卡账号即可登录；楼道设有公共热水设备。男生 8 号楼为六人间，女生 4 号楼为四人间，基础条件相近。</p><p><b>用电提示</b>学校宿舍不限电，可以使用吹风机，但原则上不建议。</p><p><b>走读申请</b>因特殊情况需校外住宿，须提交走读申请并取得家长同意，具体流程咨询辅导员。</p><p><b>床位安排</b>主要依据班级与学号。提前到校可在当日安排内选择床位。</p></div></div></article>
           <article class="guide-item"><button class="guide-toggle" aria-expanded="false"><span class="guide-number">03</span><span><strong>校园卡办理</strong><small>CAMPUS CARD</small></span><i data-lucide="plus"></i></button><div class="guide-detail"><div class="answer-grid"><p><b>线上申领</b>校园卡不随录取材料统一发放，暑期申领通道已开启，可通过二维码或学校公众号菜单栏按提示申请。</p><p><b>使用权益</b>办理后可免费使用校园网络；支持邮寄到家，减少开学现场排队。</p></div></div></article>
           <article class="guide-item"><button class="guide-toggle" aria-expanded="false"><span class="guide-number">04</span><span><strong>餐饮与生活成本</strong><small>DINING & BUDGET</small></span><i data-lucide="plus"></i></button><div class="guide-detail"><div class="answer-grid"><p><b>两座食堂</b>一食堂一楼主营面食与自选餐，二楼设清真窗口和教职工餐厅；二食堂一楼菜品、面食品类最全，二楼主打特色小吃。</p><p><b>消费与兼职</b>食堂支持微信、支付宝无现金支付，校内允许外卖。每月餐饮约 600-800 元，综合生活开支约 1500 元 / 月；校内有兼职与勤工助学岗位。</p></div></div></article>
           <article class="guide-item"><button class="guide-toggle" aria-expanded="false"><span class="guide-number">05</span><span><strong>公共浴室与快递</strong><small>DAILY SERVICES</small></span><i data-lucide="plus"></i></button><div class="guide-detail"><div class="answer-grid"><p><b>公共浴室</b>学生公寓楼下设置公共浴室，每日 16:30 起开放，单次洗浴约 1 元。可按需选购 2m × 1.2m 浴帘。</p><p><b>快递服务</b>快递站位于校区南侧，沿公寓楼通道直行可达。收件地址：江苏省泰州市靖江市新港大道 136 号常州大学怀德学院。尽量在 21:00 前取件。</p></div></div></article>
@@ -109,11 +119,23 @@
       <section class="closing wrap"><div><p class="eyebrow accent">BE READY, BE CURIOUS</p><h2>找到组织，<br />再出发。</h2><p>需要查阅各专业大一上学期课表，可联系文末工作人员获取。宿舍环境视频与官方新生群信息可在学校正式通知发布后补充至本页面。</p></div><aside><i data-lucide="graduation-cap"></i><h3>2026 级新生</h3><p>常州大学怀德学院</p><span>入学答疑汇总</span></aside></section>
       <section class="campus-map wrap" aria-labelledby="campus-map-title">
         <div class="campus-map__heading"><div><p class="eyebrow accent">CAMPUS MAP</p><h2 id="campus-map-title">校园地图</h2></div><p>报到前先熟悉北大门、宿舍区、食堂、图书馆、操场与快递中心的位置。</p></div>
-        <figure class="campus-map__frame"><a href="./assets/campus-map-full.png" target="_blank" rel="noreferrer" aria-label="在新窗口查看校园地图大图"><img class="campus-map__image" src="./assets/campus-map-full.png" alt="常州大学怀德学院校园地图，标注北大门、宿舍楼、食堂、图书馆、操场及快递中心" /><span class="campus-map__credit">该图片并非用于盈利，侵权连系删除</span></a><figcaption>点击地图可查看大图</figcaption></figure>
+        <figure class="campus-map__frame"><a href="./assets/campus-map-full.png" target="_blank" rel="noreferrer" aria-label="在新窗口查看校园地图大图"><img class="campus-map__image" src="./assets/campus-map-full.png" alt="常州大学怀德学院校园地图，标注教学楼、学生公寓、食堂、图书馆、操场及快递中心" /><span class="campus-map__credit">该图片并非用于盈利，侵权连系删除</span></a><figcaption>点击地图可查看大图</figcaption></figure>
       </section>
       <section class="contact-strip wrap" aria-labelledby="contact-strip-title"><div class="contact-strip__inner"><div><h2 id="contact-strip-title">学长联系方式</h2><p>新生咨询与交流</p></div><div class="contact-strip__list"><div class="contact-strip__item"><small>QQ 新生群</small><strong>874640064</strong></div><div class="contact-strip__item"><small>微信</small><strong>qun483</strong></div><div class="contact-strip__item"><small>抖音</small><strong>Leon888888888888</strong></div></div></div></section>
     </main>
     <footer><div class="wrap"><a class="brand" href="#top"><span>HD</span><strong>怀德新生攻略</strong></a><p>常州大学怀德学院 · 2026 级新生入学答疑</p><p>更新于 2026.07</p></div></footer>
+    <div class="access-modal" id="access-modal" hidden role="dialog" aria-modal="true" aria-labelledby="access-modal-title">
+      <div class="access-modal__dialog">
+        <h2 id="access-modal-title">访问答疑内容</h2>
+        <p>获取密码，请加微信：qun483</p>
+        <form class="access-modal__form" id="access-modal-form">
+          <label for="access-password">输入访问密码</label>
+          <input id="access-password" name="password" type="password" autocomplete="off" required />
+          <p class="access-modal__error" id="access-modal-error" aria-live="polite"></p>
+          <button type="submit">验证并查看</button>
+        </form>
+      </div>
+    </div>
     <script src="./script.js"></script>
   </body>
 </html>
