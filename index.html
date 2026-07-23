@@ -35,13 +35,17 @@
       .contact-strip__inner { display: grid; grid-template-columns: .72fr 1.28fr; gap: 36px; align-items: center; padding: 34px; background: #fff; border-top: 3px solid var(--blue); }
       .contact-strip h2 { margin: 0; font-size: 26px; }
       .contact-strip p { margin: 5px 0 0; color: var(--muted); font-size: 14px; }
-      .contact-strip__list { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+      .contact-strip__list { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
       .contact-strip__item { min-height: 82px; padding: 14px; background: #f8f2f1; border-left: 2px solid var(--blue); }
       .contact-strip__item small { display: block; color: var(--blue); font: 500 11px "DM Mono", monospace; letter-spacing: .5px; }
       .contact-strip__item strong { display: block; margin-top: 6px; font-size: 15px; word-break: break-all; }
+      .contact-strip__services { grid-column: 1 / -1; display: flex; flex-wrap: wrap; align-items: center; gap: 10px; padding: 17px; background: var(--deep); color: #fff; }
+      .contact-strip__services strong { margin-right: 4px; font-size: 15px; }
+      .contact-strip__services span { padding: 4px 9px; background: rgba(255, 255, 255, .13); color: #fff; font-size: 13px; font-weight: 700; }
       body { isolation: isolate; }
       .watermark-layer { position: fixed; inset: -25vh -25vw; z-index: 0; display: grid; grid-template-columns: repeat(12, 1fr); grid-template-rows: repeat(10, 1fr); align-items: center; justify-items: center; transform: rotate(-45deg); pointer-events: none; user-select: none; overflow: hidden; }
-      .watermark-layer span { color: rgba(159, 38, 34, .07); font: 600 15px "Noto Sans SC", sans-serif; white-space: nowrap; letter-spacing: 0; }
+      .watermark-layer span { color: transparent; font: 600 22px "Noto Sans SC", sans-serif; white-space: nowrap; letter-spacing: 0; }
+      .watermark-layer span::after { content: "微信号 qun483"; color: rgba(159, 38, 34, .07); }
       .site-header, main, footer { position: relative; z-index: 1; }
       .campus-map figcaption { padding: 12px 16px; color: var(--muted); font-size: 13px; }
       @media (max-width: 720px) { .campus-map { padding-top: 58px; } .campus-map__heading { display: block; } .campus-map__heading p { margin-top: 10px; } .contact-strip { padding-bottom: 58px; } .contact-strip__inner { grid-template-columns: 1fr; gap: 22px; padding: 24px; } .contact-strip__list { grid-template-columns: 1fr; } }
@@ -62,6 +66,8 @@
       .access-modal__form button { justify-self: start; border: 0; border-radius: 0; padding: 12px 18px; background: var(--blue); color: #fff; font: inherit; font-weight: 700; cursor: pointer; }
       .access-modal__error { min-height: 20px; color: #a92320 !important; font-size: 13px; }
       .reference-link { display: inline-block; margin-top: 10px; color: var(--blue); font-weight: 700; text-decoration: underline; text-underline-offset: 3px; }
+      .fitness-frame { display: block; width: 100%; height: 680px; border: 1px solid var(--line); background: #fff; }
+      @media (max-width: 720px) { .fitness-frame { height: 560px; } }
     </style>
   </head>
   <body>
@@ -83,7 +89,7 @@
         <img class="hero-image" src="./assets/tsg.jpg" alt="常州大学怀德学院校园建筑" />
         <div class="hero-shade"></div>
         <img class="hero-badge" src="./assets/huaide-badge.png" alt="常州大学怀德学院校徽" />
-        <div class="guide-version">2026 FRESHMAN GUIDE · V1.3</div>
+        <div class="guide-version">2026 FRESHMAN GUIDE · V1.4</div>
         <div class="hero-content wrap">
           <p class="eyebrow">CHANGZHOU UNIVERSITY HUAIDE COLLEGE · 2026</p>
           <h1 id="hero-title">WELCOME TO<br /><span>怀德新生攻略</span></h1>
@@ -110,7 +116,7 @@
         <div id="directory" class="guide-grid">
           <article id="arrival" class="guide-item open"><button class="guide-toggle" aria-expanded="true"><span class="guide-number">01</span><span><strong>时间规划</strong><small>IMPORTANT DATES</small></span><i data-lucide="plus"></i></button><div class="guide-detail"><div class="answer-grid"><p><b>报到与行课</b>2026 级新生报到时间待定，最终以纸质录取通知书标注时间为准。</p><p><b>录取通知书</b>统一通过 EMS 寄送，周期为 7 月底至 8 月初，可登录学校招生官网查询物流状态。</p></div></div></article>
           <article id="dorm" class="guide-item"><button class="guide-toggle" aria-expanded="false"><span class="guide-number">02</span><span><strong>住宿体系</strong><small>DORMITORY LIFE</small></span><i data-lucide="plus"></i></button><div class="guide-detail"><p class="lead">全校共有 8 栋学生公寓：2、3、4、5、7 号楼为女生公寓，1、6、8 号楼为男生公寓。均配备独立卫浴、阳台、洗漱台、空调、学习桌椅、书柜和衣柜，24 小时通水、通电、通网络。</p><div class="answer-grid"><p><b>费用与床位</b>住宿费 1000-1500 元 / 年；水费免费，电费分摊。宿舍和床位由学校统一分配，不可自主选择。床位尺寸为 90cm × 200cm。</p><p><b>宿舍配置</b>宽带免费使用，绑定校园卡账号即可登录；楼道设有公共热水设备。男生 8 号楼为六人间，女生 4 号楼为四人间，基础条件相近。</p><p><b>用电提示</b>学校宿舍不限电，可以使用吹风机，但原则上不建议。</p><p><b>走读申请</b>因特殊情况需校外住宿，须提交走读申请并取得家长同意，具体流程咨询辅导员。</p><p><b>床位安排</b>主要依据班级与学号。提前到校可在当日安排内选择床位。</p></div></div></article>
-          <article class="guide-item"><button class="guide-toggle" aria-expanded="false"><span class="guide-number">03</span><span><strong>校园卡办理</strong><small>CAMPUS CARD</small></span><i data-lucide="plus"></i></button><div class="guide-detail"><div class="answer-grid"><p><b>线上申领</b>校园卡不随录取材料统一发放，暑期申领通道已开启，可通过二维码或学校公众号菜单栏按提示申请。现在办理超划算，暑假期间免费使用。</p><p><b>使用权益</b>办理后可免费使用校园网络；支持邮寄到家，减少开学现场排队。</p></div></div></article>
+          <article class="guide-item"><button class="guide-toggle" aria-expanded="false"><span class="guide-number">03</span><span><strong>校园卡办理</strong><small>CAMPUS CARD</small></span><i data-lucide="plus"></i></button><div class="guide-detail"><div class="answer-grid"><p><b>线上申领</b>校园卡不随录取材料统一发放，暑期申领通道已开启，可以联系学长领取，现在办理，暑假期间可免费使用！</p><p><b>使用权益</b>办理后可免费使用校园网络；支持邮寄到家，减少开学现场排队。</p></div></div></article>
           <article class="guide-item"><button class="guide-toggle" aria-expanded="false"><span class="guide-number">04</span><span><strong>餐饮与生活成本</strong><small>DINING & BUDGET</small></span><i data-lucide="plus"></i></button><div class="guide-detail"><div class="answer-grid"><p><b>两座食堂</b>一食堂一楼主营面食与自选餐，二楼设清真窗口和教职工餐厅；二食堂一楼菜品、面食品类最全，二楼主打特色小吃。</p><p><b>消费与兼职</b>食堂支持微信、支付宝无现金支付，校内允许外卖。每月餐饮约 600-800 元，综合生活开支约 1500 元 / 月；校内有兼职与勤工助学岗位。</p></div></div></article>
           <article class="guide-item"><button class="guide-toggle" aria-expanded="false"><span class="guide-number">05</span><span><strong>公共浴室与快递</strong><small>DAILY SERVICES</small></span><i data-lucide="plus"></i></button><div class="guide-detail"><div class="answer-grid"><p><b>公共浴室</b>学生公寓楼下设置公共浴室，每日 16:30 起开放，单次洗浴约 1 元。可按需选购 2m × 1.2m 浴帘。</p><p><b>快递服务</b>快递站位于校区南侧，沿公寓楼通道直行可达。收件地址：江苏省泰州市靖江市新港大道 136 号常州大学怀德学院。尽量在 21:00 前取件。</p></div></div></article>
           <article class="guide-item"><button class="guide-toggle" aria-expanded="false"><span class="guide-number">06</span><span><strong>新生报到事宜</strong><small>REGISTRATION</small></span><i data-lucide="plus"></i></button><div class="guide-detail"><div class="answer-grid"><p><b>携带材料</b>录取通知书、身份证、6 张一寸免冠证件照；家庭经济困难学生另带民政部门贫困证明。报到地点在二食堂门口，需人脸核验。</p><p><b>现场流程</b>现场登记 → 院系班级签到 → 领取宿舍钥匙安置行李 → 缴纳 20 元空调遥控器押金并领取设备。</p><p><b>学校地址</b>江苏省泰州市靖江市新港大道 136 号常州大学怀德学院。无法按时报到需履行请假手续。</p><p><b>注意事项</b>严格遵守报到时间；逾期未报到将取消入学资格。</p></div></div></article>
@@ -119,6 +125,8 @@
           <article class="guide-item"><button class="guide-toggle" aria-expanded="false"><span class="guide-number">09</span><span><strong>学习、社团与考研</strong><small>STUDY & COMMUNITY</small></span><i data-lucide="plus"></i></button><div class="guide-detail"><div class="answer-grid"><p><b>考研保障</b>图书馆设考研专属座位，开放时间 8:00-21:00；各公寓楼内也有自习室，便于备考。</p><p><b>学生社团</b>社团覆盖文体、学术、公益、兴趣等领域，可自由报名。建议加入不超过 3 个，以免影响学业和作息。</p></div></div></article>
           <article id="travel" class="guide-item"><button class="guide-toggle" aria-expanded="false"><span class="guide-number">10</span><span><strong>交通与休闲</strong><small>TRAVEL & LEISURE</small></span><i data-lucide="plus"></i></button><div class="guide-detail"><div class="answer-grid"><p><b>日常出行</b>校内可骑行非机动车；223 路、206 路公交连接校园与靖江市区，约 40 分钟。校门口共享电动车半小时约 2.5 元。</p><p><b>周边去处</b>泰和吾悦商圈是主要购物场所；牧城公园是本地大型免费公园。往返江阴可公交换乘，约 7 元，最近高铁站为无锡江阴站。</p></div></div></article>
           <article class="guide-item"><button class="guide-toggle" aria-expanded="false"><span class="guide-number">11</span><span><strong>校园基本情况</strong><small>ABOUT HUAIDE</small></span><i data-lucide="plus"></i></button><div class="guide-detail"><div class="answer-grid"><p><b>校区位置</b>学校位于靖江市斜桥镇，生态环境良好，生活配套完善。</p><p><b>院系特点</b>全校男女比例约 4:6，逐步趋于均衡；建筑环境、机械材料、信息类男生较多，会计、经管、艺术、外语类女生较多。</p></div></div></article>
+          <article class="guide-item"><button class="guide-toggle" aria-expanded="false"><span class="guide-number">12</span><span><strong>体育考核完整指南</strong><small>PHYSICAL EDUCATION</small></span><i data-lucide="plus"></i></button><div class="guide-detail"><p class="lead">体育考核由专项选修课期末考试、国家体质健康标准统一测试和大一至大三长跑考核组成。</p><div class="answer-grid"><p><b>专项选修课期末考核</b>新生可自主选择体育专项，每学期考核对应技能。球类含篮球、足球、排球、羽毛球、乒乓球：篮球考运球折返跑、定点投篮、三步上篮计时；羽毛球、乒乓球考正反手颠球、定点对打、发球达标。拉拉操、长拳、武术按成套动作、规范与节奏综合计分；田径体能类考实心球投掷。</p><p><b>体测统考</b>国家体质健康标准统一测试共 7 项：身高体重（BMI）、肺活量、50 米短跑、坐位体前屈、立定跳远；男生引体向上、女生一分钟仰卧起坐；男生 1000 米、女生 800 米耐力跑。</p><p><b>长跑考核</b>覆盖大一至大三三个学年，共 6 次。女生 2400 米、男生 2800 米，均以 16 分钟为及格线。</p><p><b>成绩构成</b>专项技能考核占 50%，体测统考占 30%，长跑打卡考核占 10%，课堂出勤表现占 10%。</p><p><b>考勤与专项规则</b>学期内旷课、缺课累计超过总课时三分之一，直接取消当期期末考核资格，必须重修。各专项期末以技术成套展示完成度、计时达标情况为核心评分依据。</p><p><b>免测与缓测</b>持县级医院诊断证明，填写《暂缓执行标准申请表》，经所在学院盖章后提交体育部备案；申请免测的学生，成绩统一按 60 分合格登记存档。</p></div></div></article>
+          <article class="guide-item"><button class="guide-toggle" aria-expanded="false"><span class="guide-number">13</span><span><strong>体质健康评分表</strong><small>FITNESS STANDARDS</small></span><i data-lucide="plus"></i></button><div class="guide-detail"><p class="lead">国家学生体质健康标准评分表，涵盖 BMI、肺活量、50 米、坐位体前屈、立定跳远、力量与耐力跑项目。</p><iframe class="fitness-frame" src="./assets/fitness-standards.html" title="国家学生体质健康标准评分表" loading="lazy"></iframe></div></article>
         </div>
       </section>
 
@@ -128,7 +136,7 @@
         <div class="campus-map__heading"><div><p class="eyebrow accent">CAMPUS MAP</p><h2 id="campus-map-title">校园地图</h2></div><p>报到前先熟悉北大门、宿舍区、食堂、图书馆、操场与快递中心的位置。</p></div>
         <figure class="campus-map__frame"><a href="./assets/campus-map-full.png" target="_blank" rel="noreferrer" aria-label="在新窗口查看校园地图大图"><img class="campus-map__image" src="./assets/campus-map-full.png" alt="常州大学怀德学院校园地图，标注教学楼、学生公寓、食堂、图书馆、操场及快递中心" /><span class="campus-map__credit">该图片并非用于盈利，侵权连系删除</span></a><figcaption>点击地图可查看大图</figcaption></figure>
       </section>
-      <section class="contact-strip wrap" aria-labelledby="contact-strip-title"><div class="contact-strip__inner"><div><h2 id="contact-strip-title">学长联系方式</h2><p>新生咨询与交流</p></div><div class="contact-strip__list"><div class="contact-strip__item"><small>QQ 新生群</small><strong>874640064</strong></div><div class="contact-strip__item"><small>微信</small><strong>qun483</strong></div><div class="contact-strip__item"><small>抖音</small><strong>Leon888888888888</strong></div></div></div></section>
+      <section class="contact-strip wrap" aria-labelledby="contact-strip-title"><div class="contact-strip__inner"><div><h2 id="contact-strip-title">学长联系方式</h2><p>新生咨询与交流</p></div><div class="contact-strip__list"><div class="contact-strip__item"><small>微信</small><strong>qun483</strong></div><div class="contact-strip__item"><small>抖音</small><strong>Leon888888888888</strong></div></div><div class="contact-strip__services"><strong>学长还负责</strong><span>网课 💻</span><span>快递代拿 📦</span><span>校园卡 💳</span><span>笔记本清灰 🧹</span></div></div></section>
     </main>
     <footer><div class="wrap"><a class="brand" href="#top"><span>HD</span><strong>怀德新生攻略</strong></a><p>常州大学怀德学院 · 2026 级新生入学答疑</p><p>更新于 2026.07</p></div></footer>
     <div class="access-modal" id="access-modal" hidden role="dialog" aria-modal="true" aria-labelledby="access-modal-title">
